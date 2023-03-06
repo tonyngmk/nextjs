@@ -12,16 +12,16 @@ export default async function Home() {
   return (
     <main>
       <h1 className="text-lg">Hello Next 13 🔥</h1>
-      {res.results.map(movie =>(
-        // <h1>{movie.title}</h1> 
-        <Movie 
-          key={movie.id}
-          id={movie.id}
-          poster_path={movie.poster_path}
-          release_date={movie.release_date}
-        />
-      ))}
-
+      <div className="grid gap-16 grid-cols-fluid">
+        {res.results.map(movie =>(
+          <Movie 
+            key={movie.id}
+            id={movie.id}
+            poster_path={movie.poster_path}
+            release_date={movie.release_date}
+          />
+        ))}        
+      </div>
     </main>
   )
 }
